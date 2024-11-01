@@ -18,7 +18,7 @@ fi
 # Clonando banco de dados
 mkdir MySQL
 cd MySQL
-git pull https://github.com/Insight-Trip/MySQL.git
+git clone https://github.com/Insight-Trip/MySQL.git
 rm README.md
 cd ..
 
