@@ -16,17 +16,16 @@ if [ $? -eq 0 ]
 fi
 
 # Clonando banco de dados
-mkdir MySQL
-cd MySQL
 git clone https://github.com/Insight-Trip/MySQL.git
+cd MySQL
 rm README.md
 cd ..
 
 #  Criando imagens personalizadas do mysql e da aplicação node e rodando-as
 sudo docker build -t minha-imagem-banco -f ./Docker/Dockerfile-mysql .
-sudo docker run -d --name meu-banco -p 3306:3306 minha-imagem-banco
-
 sudo docker build -t minha-imagem-node -f ./Docker/Dockerfile-node .
+
+sudo docker run -d --name meu-banco -p 3306:3306 minha-imagem-banco
 sudo docker run -d --name meu-node -p 3333:3333 minha-imagem-node
 
 # Solicitando chaves de acesso
