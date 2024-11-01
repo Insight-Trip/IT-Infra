@@ -17,15 +17,15 @@ fi
 
 # Clonando banco de dados
 cd MySQL
-git pull https://github.com/Insight-Trip/MySQL. git
+git pull https://github.com/Insight-Trip/MySQL.git
 rm README.md
 cd ..
 
 #  Criando imagens personalizadas do mysql e da aplicação node e rodando-as
-sudo docker build -t minha-imagem-banco -f Dockerfile-mysql .
+sudo docker build -t minha-imagem-banco -f Dockerfile-mysql ./Docker
 sudo docker run -d --name meu-banco -p 3306:3306 minha-imagem-banco
 
-sudo docker build -t minha-imagem-node -f Dockerfile-node .
+sudo docker build -t minha-imagem-node -f Dockerfile-node ./Docker
 sudo docker run -d --name meu-node -p 3333:3333 minha-imagem-node
 
 # Solicitando chaves de acesso
