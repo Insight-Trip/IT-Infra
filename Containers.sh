@@ -29,9 +29,9 @@ sudo docker run -d --name meu-banco -p 3306:3306 minha-imagem-banco
 sudo docker run -d --name meu-node -p 3333:3333 minha-imagem-node
 
 # Solicitando chaves de acesso
-read -p "Digite sua AWS_ACCESS_KEY_ID: " AWS_ACCESS_KEY_ID
-read -p "Digite sua AWS_SECRET_ACCESS_KEY: " AWS_SECRET_ACCESS_KEY
-read -p "Digite sua AWS_SESSION_TOKEN: " AWS_SESSION_TOKEN
+read -sp "Digite sua AWS_ACCESS_KEY_ID: " AWS_ACCESS_KEY_ID
+read -sp "Digite sua AWS_SECRET_ACCESS_KEY: " AWS_SECRET_ACCESS_KEY
+read -sp "Digite sua AWS_SESSION_TOKEN: " AWS_SESSION_TOKEN
 
 # Exportando as variáveis para váriaveis de sessão
 export AWS_ACCESS_KEY_ID="$AWS_ACCESS_KEY_ID"
