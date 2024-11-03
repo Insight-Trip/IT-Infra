@@ -2,7 +2,7 @@ FROM node
 
 WORKDIR /app
 
-RUN git clone https://github.com/Insight-Trip/Insight-Trip.git
+RUN git clone https://github.com/Insight-Trip/Insight-Trip-Project.git
 
 WORKDIR /app/Insight-Trip
 
