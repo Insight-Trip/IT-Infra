@@ -4,7 +4,7 @@ WORKDIR /app
 
 RUN git clone https://github.com/Insight-Trip/Insight-Trip-Project.git
 
-WORKDIR /app/Insight-Trip
+WORKDIR /app/Insight-Trip-Project
 
 RUN npm install
 
