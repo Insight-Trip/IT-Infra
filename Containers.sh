@@ -11,6 +11,7 @@ if [ $? -eq 0 ]
         read get
     if [ "$get" == "s" ]
         then
+            sudo apt update && sudo apt upgrade -y
             sudo apt install docker.io -y
     fi
 fi
