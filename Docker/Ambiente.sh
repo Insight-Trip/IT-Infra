@@ -37,23 +37,7 @@ fi
 git clone https://github.com/Insight-Trip/MySQL.git
 rm ./MySQL/README.md
 
-sudo docker-compose up
-
-# Solicitando chaves de acesso
-read -sp "Digite sua AWS_ACCESS_KEY_ID: " AWS_ACCESS_KEY_ID
-read -sp "Digite sua AWS_SECRET_ACCESS_KEY: " AWS_SECRET_ACCESS_KEY
-read -sp "Digite sua AWS_SESSION_TOKEN: " AWS_SESSION_TOKEN
-
-# Exportando as variáveis para váriaveis de sessão
-export AWS_ACCESS_KEY_ID="$AWS_ACCESS_KEY_ID"
-export AWS_SECRET_ACCESS_KEY="$AWS_SECRET_ACCESS_KEY"
-export AWS_SESSION_TOKEN="$AWS_SESSION_TOKEN"
-
-
 echo "
-AWS_ACCESS_KEY_ID=\"$AWS_ACCESS_KEY_ID\"
-AWS_SECRET_ACCESS_KEY=\"$AWS_SECRET_ACCESS_KEY\"
-AWS_SESSION_TOKEN=\"$AWS_SESSION_TOKEN\"
 NOME_BUCKET=\"bucket-insight-trip\"
 DB_HOST="it-app-db-1"
 DB_PORT=3306
@@ -61,3 +45,5 @@ DB_NAME=\"InsightTrip\"
 DB_USER=\"root\"
 DB_PASSWORD=123
 "  > .env
+
+sudo docker-compose up
