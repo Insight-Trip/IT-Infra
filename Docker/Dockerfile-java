@@ -1,5 +1,5 @@
-FROM amazoncorretto:8u432-al2023-jre
+FROM amazoncorretto:21.0.5-al2023-headless
 WORKDIR /app
-COPY ../AlgoritmoLog-2.0-SNAPSHOT-jar-with-dependencies.jar .
+COPY ./AlgoritmoLog-2.0-SNAPSHOT-jar-with-dependencies.jar .
 COPY ./.env .
-ENTRYPOINT ["java" "-jar" "AlgoritmoLog-2.0-SNAPSHOT-jar-with-dependencies.jar"]
+ENTRYPOINT ["java", "-jar", "AlgoritmoLog-2.0-SNAPSHOT-jar-with-dependencies.jar"]
