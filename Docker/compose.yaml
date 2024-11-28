@@ -26,7 +26,7 @@ services:
     networks:
     - backend
   java:
-    image: matheusos2002/java_it:v2
+    image: matheusos2002/java_it:v1
     restart: on-failure
     depends_on:
       - db
