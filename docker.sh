@@ -24,6 +24,9 @@ rm ./MySQL/README.md
 sudo docker build -t minha-imagem-banco -f ./Dockerfiles/Dockerfile-mysql .
 sudo docker build -t minha-imagem-node -f ./Dockerfiles/Dockerfile-node .
 
+sudo docker run --name meu-banco -p 3306:3306 -e 'MYSQL_ROOT_PASSWORD=123' minha-imagem-banco
+sudo docker run --name meu-node -p 3333:3333 minha-imagem-node
+
 # Solicitando chaves de acesso
 read -sp "Digite sua AWS_ACCESS_KEY_ID: " AWS_ACCESS_KEY_ID
 read -sp "Digite sua AWS_SECRET_ACCESS_KEY: " AWS_SECRET_ACCESS_KEY
