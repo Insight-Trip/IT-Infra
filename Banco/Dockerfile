@@ -1,0 +1,11 @@
+FROM mysql
+
+ENV MYSQL_ROOT_PASSWORD=123
+
+ENV MYSQL_USER=API
+
+ENV MYSQL_PASSWORD=webDataViz0API
+
+COPY MySQL /docker-entrypoint-initdb.d
+
+EXPOSE 3306
