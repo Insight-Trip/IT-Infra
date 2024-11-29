@@ -6,6 +6,6 @@ ENV MYSQL_USER=API
 
 ENV MYSQL_PASSWORD=webDataViz0API
 
-COPY MySQL /docker-entrypoint-initdb.d
+COPY /MySQL /docker-entrypoint-initdb.d
 
 EXPOSE 3306
