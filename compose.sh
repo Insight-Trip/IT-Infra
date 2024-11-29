@@ -35,7 +35,7 @@ fi
 
 # Clonando banco de dados
 git clone https://github.com/Insight-Trip/MySQL.git
-rm ./MySQL/README.md
+mv MySQL Java
 
 echo "
 NOME_BUCKET=\"bucket-insight-trip\"
@@ -44,6 +44,6 @@ DB_PORT=3306
 DB_NAME=\"InsightTrip\"
 DB_USER=\"root\"
 DB_PASSWORD=123
-"  > .env
+"  > Java/.env
 
-sudo docker-compose up
+sudo docker-compose up -d

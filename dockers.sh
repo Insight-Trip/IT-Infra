@@ -21,11 +21,11 @@ git clone https://github.com/Insight-Trip/MySQL.git
 mv MySQL Banco
 
 #  Criando imagens personalizadas do mysql e da aplicação node e rodando-as
-sudo docker build -t minha-imagem-banco ./Banco .
-sudo docker build -t minha-imagem-node ./Site .
+sudo docker build -t minha-imagem-banco ./Banco/Dockerfile .
+sudo docker build -t minha-imagem-node ./Site/Dockerfile .
 
-sudo docker run --name meu-banco -p 3306:3306 -e 'MYSQL_ROOT_PASSWORD=123' minha-imagem-banco
-sudo docker run --name meu-node -p 3333:3333 minha-imagem-node
+sudo docker run --name meu-banco -d -p 3306:3306 -e 'MYSQL_ROOT_PASSWORD=123' minha-imagem-banco
+sudo docker run --name meu-node -d -p 3333:3333 minha-imagem-node
 
 # Solicitando chaves de acesso
 read -sp "Digite sua AWS_ACCESS_KEY_ID: " AWS_ACCESS_KEY_ID
@@ -47,4 +47,4 @@ DB_PORT=3306
 DB_NAME=\"InsightTrip\"
 DB_USER=\"root\"
 DB_PASSWORD=123
-"  > .env
+"  > Java/.env
