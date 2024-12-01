@@ -46,4 +46,4 @@ DB_USER=\"root\"
 DB_PASSWORD=123
 "  > Java/.env
 
-sudo docker-compose up -d
+sudo docker-compose -f Compose/compose.yaml up -d
