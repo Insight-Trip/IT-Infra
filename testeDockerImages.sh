@@ -27,7 +27,7 @@ DB_PASSWORD=123
 
 # Clonando repositório do banco
 git clone https://github.com/Insight-Trip/MySQL.git
-mv MySQL Banco
+mv -f MySQL Banco
 
 #  Criando imagens personalizadas do mysql e da aplicação node e rodando-as
 sudo docker build -t minha-imagem-banco -f ./Banco/Dockerfile .

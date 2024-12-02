@@ -35,7 +35,7 @@ fi
 
 # Clonando banco de dados
 git clone https://github.com/Insight-Trip/MySQL.git
-mv MySQL Java
+mv -f MySQL Java
 
 echo "
 NOME_BUCKET=\"bucket-insight-trip\"
